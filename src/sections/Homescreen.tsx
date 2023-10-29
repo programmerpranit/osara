@@ -1,9 +1,8 @@
 /* eslint-disable react/display-name */
 import Image from "next/image";
-import React, { forwardRef, useState } from "react";
+import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import { RiGlobalLine } from "react-icons/ri";
 function Homescreen(): any {
   const [startDate, setStartDate] = useState(new Date());
 
@@ -99,7 +98,7 @@ function Homescreen(): any {
           <DatePicker
             className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
             selected={startDate}
-            onChange={(date) => {
+            onChange={(date: any) => {
               setStartDate(date);
             }}
           />
@@ -107,7 +106,7 @@ function Homescreen(): any {
           <DatePicker
             className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
             selected={startDate}
-            onChange={(date) => {
+            onChange={(date: any) => {
               setStartDate(date);
             }}
           />
@@ -349,12 +348,12 @@ function Homescreen(): any {
           <h3 className="mx-4 mt-4 text-end ">A Tale of Two Tastes</h3>
           <p className="mx-4 mt-6 text-justify ">
             Our culinary journey takes you on a voyage through both vegetarian
-            and non-vegetarian culinary realms. Whether you're an ardent
-            vegetarian or a dedicated non-vegetarian, we've curated a menu that
-            caters to your preferences. The sumptuous vegetarian thali boasts
-            the richness of spices and ingredients that define Indian cuisine.
-            Meanwhile, the sizzling non-veg platter is a testament to the
-            vibrancy and diversity of flavors, satisfying even the most
+            and non-vegetarian culinary realms. Whether you&apos;re an ardent
+            vegetarian or a dedicated non-vegetarian, we&apos;ve curated a menu
+            that caters to your preferences. The sumptuous vegetarian thali
+            boasts the richness of spices and ingredients that define Indian
+            cuisine. Meanwhile, the sizzling non-veg platter is a testament to
+            the vibrancy and diversity of flavors, satisfying even the most
             discerning of palates.
           </p>
           <hr className="mb-8 w-full  border border-primary" />
@@ -363,9 +362,9 @@ function Homescreen(): any {
             The setting for your dining experience is as exquisite as the dishes
             themselves. Enjoy your meals against the backdrop of serene lake
             views, where the gentle play of sunlight on the water creates an
-            ambiance that's second to none. Whether it's breakfast, lunch, or
-            dinner, each dining experience is an immersive journey that
-            transports you to a world of taste and tranquility.
+            ambiance that&apos;s second to none. Whether it&apos;s breakfast,
+            lunch, or dinner, each dining experience is an immersive journey
+            that transports you to a world of taste and tranquility.
           </p>
           <hr className="mb-8 w-full  border border-primary" />
           <h3 className="mx-4 mt-4 text-end ">Impeccable Service</h3>
@@ -373,16 +372,16 @@ function Homescreen(): any {
             Our commitment to your dining satisfaction goes beyond the cuisine.
             Our attentive staff is dedicated to providing impeccable service,
             ensuring that your every need is met. From recommending the perfect
-            wine to pairing it with your choice of dish, we're here to make your
-            dining experience extraordinary.
+            wine to pairing it with your choice of dish, we&apos;re here to make
+            your dining experience extraordinary.
           </p>
           <p className="mx-4 mt-6 text-justify ">
-            At Aamraa Resort, dining is not just a meal; it's a celebration.
-            It's an exploration of flavors, a tribute to tradition, and a
-            testament to the artistry of our chefs. It's a journey of the
-            senses, where every bite tells a story, and every moment is savored.
-            Come, indulge in the delight of dining at Aamraa Resort, where food
-            is an experience, and every meal is a memory.
+            At Aamraa Resort, dining is not just a meal; it&apos;s a
+            celebration. It&apos;s an exploration of flavors, a tribute to
+            tradition, and a testament to the artistry of our chefs. It&apos;s a
+            journey of the senses, where every bite tells a story, and every
+            moment is savored. Come, indulge in the delight of dining at Aamraa
+            Resort, where food is an experience, and every meal is a memory.
           </p>
         </div>
       </div>

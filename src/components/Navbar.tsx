@@ -1,13 +1,10 @@
+/* eslint-disable @typescript-eslint/strict-boolean-expressions */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import image from "../../public/Logo.png";
-import { Fragment, useState } from "react";
-import { Menu, Transition } from "@headlessui/react";
-import { IoIosArrowDown } from "react-icons/io";
+
 import Link from "next/link";
 import Image from "next/image";
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
+import { useState } from "react";
+
 function MobileNav({ open, setOpen }: any) {
   return (
     <div
