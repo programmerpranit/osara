@@ -1,25 +1,7 @@
-/* eslint-disable react/display-name */
-import Image from "next/image";
-import React, { useState } from "react";
-import DatePicker from "react-datepicker";
+import React from "react";
 import "react-datepicker/dist/react-datepicker.css";
-import { RiGlobalLine, RiHomeWifiLine } from "react-icons/ri";
-import { FaUniversity, FaCoffee, FaBath } from "react-icons/fa";
-import { IoMdAlarm } from "react-icons/io";
-import { MdLocalPhone } from "react-icons/md";
 
 function Homescreen(): JSX.Element {
-  const initialState = {
-    checkIn: "",
-    checkOut: "",
-    adult: "",
-    children: "",
-    roomType: "",
-    reqRooms: "",
-    phone: "",
-  };
-  const [startDate, setStartDate] = useState(new Date());
-  const [roomForm, setRoomForm] = useState(initialState);
   return (
     <>
       <div className=" flex min-h-screen flex-col items-center justify-center   ">
