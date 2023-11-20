@@ -97,29 +97,30 @@ function MobileNav({ open, setOpen }: any) {
           className="font-Inter text-primary-black  hover:text-primary-orange text-xl "
           href="/Financing"
         >
-          Financing
+          Home
         </Link>
         <Link
           onClick={() => setOpen(!open)}
           className="font-Inter text-primary-black  hover:text-primary-orange text-xl "
           href="/sellCar"
         >
-          Sell Car
+          About
         </Link>
         <Link
           onClick={() => setOpen(!open)}
           className="font-Inter text-primary-black  hover:text-primary-orange text-xl "
           href="/contacts"
         >
-          Contacts
+          Rooms and Suits
         </Link>
         <Link
           onClick={() => setOpen(!open)}
           className="font-Inter text-primary-black  hover:text-primary-orange text-xl "
           href="/Faqs"
         >
-          FAQs
+          Contact
         </Link>
+        <button className="w-1/2 self-center py-4 ">Rooms and Suits</button>
       </div>
     </div>
   );
@@ -176,7 +177,7 @@ function Navbar() {
                     className="font-Inter text-primary-black  hover:text-primary-orange text-md lg:text-xl  "
                     href="/Financing"
                   >
-                    Financing
+                    Home
                   </Link>
                 </li>
                 <li>
@@ -184,7 +185,7 @@ function Navbar() {
                     className="font-Inter text-primary-black  hover:text-primary-orange text-md lg:text-xl  "
                     href="/Financing"
                   >
-                    Financing
+                    About
                   </Link>
                 </li>
                 <li>
@@ -192,7 +193,7 @@ function Navbar() {
                     className="font-Inter text-primary-black  hover:text-primary-orange text-md lg:text-xl  "
                     href="/Financing"
                   >
-                    Financing
+                    Room & Suits
                   </Link>
                 </li>
                 <li>
@@ -200,7 +201,7 @@ function Navbar() {
                     className="font-Inter text-primary-black hover:text-primary-orange  text-md flex lg:text-xl  "
                     href="/sellCar"
                   >
-                    Sell Car
+                    Contact
                   </Link>
                 </li>
                 <li>
@@ -208,15 +209,15 @@ function Navbar() {
                     className="font-Inter text-primary-black  hover:text-primary-orange text-md lg:text-xl "
                     href="/contacts"
                   >
-                    Contacts
+                    FAQ
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="font-Inter text-primary-black  hover:text-primary-orange text-md lg:text-xl  "
-                    href="/Faqs"
+                    className="font-Inter text-primary-black  hover:text-primary-orange text-md lg:text-xl "
+                    href="/contacts"
                   >
-                    FAQs
+                    <button className="py-4 ">Rooms and Suits</button>
                   </Link>
                 </li>
               </ul>

@@ -3,27 +3,41 @@ import Image from "next/image";
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-function Homescreen(): any {
-  const [startDate, setStartDate] = useState(new Date());
+import { RiGlobalLine, RiHomeWifiLine } from "react-icons/ri";
+import { FaUniversity, FaCoffee, FaBath } from "react-icons/fa";
+import { IoMdAlarm } from "react-icons/io";
+import { MdLocalPhone } from "react-icons/md";
 
+function Homescreen(): any {
+  const initialState = {
+    checkIn: "",
+    checkOut: "",
+    adult: "",
+    children: "",
+    roomType: "",
+    reqRooms: "",
+    phone: "",
+  };
+  const [startDate, setStartDate] = useState(new Date());
+  const [roomForm, setRoomForm] = useState(initialState);
   return (
     <>
-      <div className=" flex min-h-screen flex-col items-center justify-center  ">
-        <div className="flex h-screen flex-col items-center justify-center bg-[#F8F5F0]">
-          <h1 className="text-5xl text-primary">Aamraa Resort</h1>
-          <h1 className=" mx-4 mb-8 mt-4 text-center">
+      <div className=" flex min-h-screen flex-col items-center justify-center   ">
+        {/* Hero Section */}
+        <div className="flex min-h-screen w-screen flex-col items-center justify-center bg-[url('/HeroBg.jpg')] bg-cover py-10">
+          <h2 className=" text-primary">Aamraa Resort</h2>
+          <h1 className=" mx-4 mb-8 mt-4 text-center text-white">
             Where Dreams Meet Destination
           </h1>
-          <hr className="mb-8 w-[80%]  border border-primary" />
-          <p className="mx-4 mb-8 text-center">
+          <hr className="mb-8 w-[20%]  border border-primary" />
+          <p className="mx-4 mb-8 text-center text-2xl font-light text-white">
             At Aamraa Resort, we&apos;re not just about providing a place to
             stay; we&apos;re about crafting unforgettable experiences in the
-            heart of Junnar, near Bankarphata. Our story is one of passion,
-            commitment, and a deep love for hospitality.
+            heart of Junnar, near Bankarphata.
           </p>
-          <button className="w-1/2 py-4">Rooms and Suits</button>
+          <button className="py-4 md:w-1/6">Rooms and Suits</button>
         </div>
-        <div className="flex-flex-col  w-full items-center justify-start px-5 py-10">
+        {/* <div className="flex-flex-col  w-full items-center justify-start px-5 py-10">
           <h1 className="text-center">About Us</h1>
           <hr className="mb-8 w-[100%]  border border-primary" />
 
@@ -68,10 +82,11 @@ function Homescreen(): any {
             a gateway to Junnar&apos;s treasures, ensuring that your stay is as
             memorable as the destination itself.
           </p>
-        </div>
-        <div className="flex h-screen flex-col items-center justify-center bg-[#F8F5F0]">
+        </div> */}
+        {/* Join us on journey */}
+        <div className="flex flex-col items-center justify-center bg-[#F8F5F0] py-20">
           <h1 className="mb-8 text-center">Join Us on the Journey:</h1>
-          <hr className="mb-8 w-[80%]  border border-primary" />
+          <hr className="mb-8 w-[20%]  border border-primary" />
           <p className="mx-4 mb-8 text-center">
             We invite you to be a part of our story, to escape the ordinary and
             embrace the extraordinary at Aamraa Resort. Whether you&apos;re
@@ -79,7 +94,7 @@ function Homescreen(): any {
             explore the hidden gems of Junnar, we&apos;re here to make it
             happen.
           </p>
-          <hr className="mb-8 w-[80%]  border border-primary" />
+          <hr className="mb-8 w-[20%]  border border-primary" />
           <h3 className="mx-4 mt-4 text-center ">
             Aamraa Resort - Your Gateway to Junnar&apos;s Wonders, Your Home
             Away from Home.
@@ -93,97 +108,134 @@ function Homescreen(): any {
             with you
           </p>
         </div>
-        <div className="flex-flex-col  w-full items-center justify-start px-5 py-10 ">
-          <h4 className="mb-2 font-bold">Check In</h4>
-          <DatePicker
-            className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
-            selected={startDate}
-            onChange={(date: any) => {
-              setStartDate(date);
-            }}
-          />
-          <h4 className="mb-2 font-bold">Check Out</h4>
-          <DatePicker
-            className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
-            selected={startDate}
-            onChange={(date: any) => {
-              setStartDate(date);
-            }}
-          />
+        {/* Checkin Form */}
+        <div className="flex w-[90%] flex-col items-start  justify-between space-x-4 px-10 py-10  md:flex-row md:items-center ">
+          <div>
+            <h4 className="mb-2 font-bold">Check In</h4>
+            <DatePicker
+              className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
+              selected={startDate}
+              onChange={(date: any) => {
+                setStartDate(date);
+              }}
+            />
+          </div>
+          <div>
+            <h4 className="mb-2 font-bold">Check Out</h4>
+            <DatePicker
+              className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
+              selected={startDate}
+              onChange={(date: any) => {
+                setStartDate(date);
+              }}
+            />
+          </div>
+          <div className="w-1/2 md:w-1/6">
+            <h4 className="mb-2 font-bold">Adult</h4>
+            <select
+              id="countries"
+              className="mb-6 block w-full border bg-white px-3 py-3"
+            >
+              <option selected>1</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+          <div className="w-1/2 md:w-1/6">
+            <h4 className="mb-2 font-bold">Children</h4>
+            <select
+              id="countries"
+              className="mb-6 block w-full border bg-white px-3 py-3"
+            >
+              <option selected>1</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+          <div className="w-1/2 md:w-1/6">
+            <h4 className="mb-2 font-bold">Room</h4>
+            <select
+              id="countries"
+              className="mb-6 block w-full border bg-white px-3 py-3"
+            >
+              <option selected>1</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
 
-          <h4 className="mb-2 font-bold">Adult</h4>
-          <select
-            id="countries"
-            className="mb-6 block w-full border bg-white px-3 py-3"
-          >
-            <option selected>1</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-          </select>
-          <h4 className="mb-2 font-bold">Children</h4>
-          <select
-            id="countries"
-            className="mb-6 block w-full border bg-white px-3 py-3"
-          >
-            <option selected>1</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-          </select>
-          <h4 className="mb-2 font-bold">Room</h4>
-          <select
-            id="countries"
-            className="mb-6 block w-full border bg-white px-3 py-3"
-          >
-            <option selected>1</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-          </select>
-          <button className="w-1/2 py-4">Check Now</button>
+          <button className=" w-1/2 py-4 md:w-1/5">Check Now</button>
         </div>
-        <div className="flex flex-col px-5 py-10">
+        {/* THe best luxury Hotel */}
+        <div className="flex min-h-screen flex-col items-center self-center px-6 py-10 md:flex-row md:justify-center">
           <Image
             src="/RoomsIMage.png"
             height={400}
             width={400}
-            className="mb-4"
+            className="mx-10 mb-4 md:w-2/5"
             alt={""}
           />
-          <h1 className="mb-8 mt-8 text-start text-5xl text-primary">
+          {/* <h1 className="mb-8 mt-8 text-start text-5xl text-primary">
             Staycation
-          </h1>
-
-          {/* <div className="mb-4 flex items-start justify-between  border p-4 ">
-            <RiGlobalLine className="mr-8" size={100} />
-            <div>
-              <h4 className="mb-2  font-extrabold">5 Star Hotel In World</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Recusandae voluptatum
-              </p>
+          </h1> */}
+          <div className=" flex flex-col items-start justify-center self-center md:ml-12 md:w-1/2">
+            <h3 className="my-4 text-primary">THE BEST LUXURY HOTEL</h3>
+            <h2 className="font-semibold  md:w-2/3">
+              Find the right Apartment Hotel and Resort for You
+            </h2>
+            <p className=" my-6 text-lg font-normal md:my-10 md:w-2/3 ">
+              Over 39,000 people work for us in more than 70 countries all over
+              This breadth of global coverage combined with specialist services
+            </p>
+            <div className="mb-8 flex items-start justify-start border  p-8 md:w-3/4">
+              <RiGlobalLine color={"#be8746"} className="mr-8" size={80} />
+              <div>
+                <h3 className="mb-2  font-extrabold">5 Star Hotel In World</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Recusandae voluptatum
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start justify-start border  p-8 md:w-3/4 ">
+              <FaUniversity color={"#be8746"} className="mr-8" size={80} />
+              <div>
+                <h3 className="mb-2  font-extrabold">Best Environment</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Recusandae voluptatum
+                </p>
+              </div>
             </div>
           </div>
-          <div className="flex items-center justify-between  border p-4 ">
-            <RiGlobalLine className="mr-8" size={100} />
-            <div>
-              <h4 className="mb-2  font-extrabold">
+        </div>
+        {/* Rooms and suits */}
+        <div className="flex flex-col items-center justify-center bg-[#F8F5F0] py-10 ">
+          <h4 className=" text-primary">THE LUXURY HOTEL</h4>
+          <h2 className=" mx-4 mb-8 mt-4 text-center font-semibold ">
+            Rooms & Suits
+          </h2>
+          <div className="flex h-full flex-col justify-center md:flex-row">
+            <div className=" mx-6 mb-10 flex flex-col items-start justify-center bg-[url('/RoomCardbg.jpg')] bg-cover p-6 md:w-1/4  md:p-10 ">
+              <h3 className="mb-4 text-white">
                 Cosmo Capsules: The Futuristic Retreat
-              </h4>
-              <p>
+              </h3>
+              <p className="mb-4 text-white">
                 Venture into the future of lodging with our Cosmo Capsules, a
                 novel and cozy haven designed for solo adventurers. As the
                 first-of-its-kind in Junnar, these cocoon-like capsules offer
@@ -191,53 +243,85 @@ function Homescreen(): any {
                 personal window to the skies, allowing you to connect with the
                 celestial beauty above.
               </p>
+              <button className=" py-4">Book Now</button>
             </div>
-          </div> */}
-        </div>
-        <div className="flex flex-col items-center justify-center ">
-          <div className=" mx-6  mb-10 bg-[url('/RoomCardbg.jpg')] bg-cover px-5 py-10 ">
-            <h1 className="pb-4 text-white">
-              Cosmo Capsules: The Futuristic Retreat
-            </h1>
-            <p className="mb-4 text-white">
-              Venture into the future of lodging with our Cosmo Capsules, a
-              novel and cozy haven designed for solo adventurers. As the
-              first-of-its-kind in Junnar, these cocoon-like capsules offer
-              unparalleled privacy and the chance to stargaze through your
-              personal window to the skies, allowing you to connect with the
-              celestial beauty above.
-            </p>
-          </div>
-          <div className=" mx-6  mb-10 bg-[url('/RoomCardbg.jpg')] bg-cover px-5 py-10 ">
-            <h1 className="pb-4 text-white">
-              The Azure Lakeview Suites - Nature&apos;s Embrace
-            </h1>
-            <p className="mb-4 text-white">
-              Embrace the picturesque charm of Junnar with our Azure Lakeview
-              Suites. Wake up to the stunning sight of the serene lake and
-              mountains beyond. Each suite is a luxurious haven, meticulously
-              designed to provide you with unobstructed views and unparalleled
-              comfort. Enjoy your morning coffee on the private balcony while
-              being caressed by the gentle breeze, and rejuvenate your senses.
-            </p>
-          </div>
-          <div className=" mx-6  mb-10 bg-[url('/RoomCardbg.jpg')] bg-cover px-5 py-10 ">
-            <h1 className="pb-4 text-white">
-              The Wada Vintage Rooms - Echoes of Tradition
-            </h1>
-            <p className="mb-4 text-white">
-              Transport yourself back in time to the Wada Vintage Rooms, where
-              the rich heritage of Junnar comes alive. These rooms blend history
-              and modernity seamlessly, with antique furnishings and
-              contemporary amenities. Experience the rustic elegance of Junnar,
-              with a touch of nostalgia in every corner
-            </p>
+            <div className=" mx-6 mb-10 flex flex-col items-start justify-center bg-[url('/RoomCardbg.jpg')] bg-cover p-6  md:w-1/4  md:p-10">
+              <h3 className="pb-4 text-white">
+                The Azure Lakeview Suites - Nature&apos;s Embrace
+              </h3>
+              <p className="mb-4 text-white">
+                Embrace the picturesque charm of Junnar with our Azure Lakeview
+                Suites. Wake up to the stunning sight of the serene lake and
+                mountains beyond. Each suite is a luxurious haven, meticulously
+                designed to provide you with unobstructed views and unparalleled
+                comfort. Enjoy your morning coffee on the private balcony while
+                being caressed by the gentle breeze, and rejuvenate your senses.
+              </p>
+              <button className=" py-4">Book Now</button>
+            </div>
+            <div className=" mx-6 mb-10 flex flex-col items-start justify-center bg-[url('/RoomCardbg.jpg')] bg-cover p-6  md:w-1/4  md:p-10 ">
+              <h3 className="pb-4 text-white">
+                The Wada Vintage Rooms - Echoes of Tradition
+              </h3>
+              <p className="mb-4 text-white">
+                Transport yourself back in time to the Wada Vintage Rooms, where
+                the rich heritage of Junnar comes alive. These rooms blend
+                history and modernity seamlessly, with antique furnishings and
+                contemporary amenities. Experience the rustic elegance of
+                Junnar, with a touch of nostalgia in every corner
+              </p>
+              <button className=" py-4">Book Now</button>
+            </div>
           </div>
         </div>
+        {/* Hotel Facilities */}
+        <div className="mb-10 flex flex-col items-center justify-center p-6">
+          <h3 className=" text-primary">HOTEL FACILITIES</h3>
+          <h2 className=" mx-4 mb-8 mt-4 text-center ">
+            Finest And Luxurious Hotel In The Town
+          </h2>
+          <p>
+            A wonderful serenity has taken possession of my entire soul, like
+            these sweet mornings of spring which I enjoy with my whole heart.
+          </p>
+          <div className="my-12 flex flex-col space-y-8 md:flex-row md:space-x-12">
+            <div className=" flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
+              <IoMdAlarm color={"#be8746"} size={60} />
+
+              <h3 className="mt-4">Parking</h3>
+            </div>
+            <div className=" flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
+              <FaCoffee color={"#be8746"} size={60} />
+
+              <h3 className="mt-4">Coffee</h3>
+            </div>
+            <div className="flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
+              <FaBath color={"#be8746"} size={60} />
+
+              <h3 className="mt-4">Bath</h3>
+            </div>
+            <div className=" flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
+              <RiHomeWifiLine color={"#be8746"} size={60} />
+
+              <h3 className="mt-4">Wifi</h3>
+            </div>
+            <div className="flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
+              <IoMdAlarm color={"#be8746"} size={60} />
+
+              <h3 className="mt-4">Parking</h3>
+            </div>
+            <div className="flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
+              <IoMdAlarm color={"#be8746"} size={60} />
+
+              <h3 className="mt-4">Parking</h3>
+            </div>
+          </div>
+        </div>
+        {/* Banquet Hall */}
         <div className="flex-flex-col w-full  items-center justify-start bg-[#F8F5F0] px-5 py-10">
-          <h1 className="mb-8 text-center">
+          <h2 className="mb-8 text-center">
             Banquet Hall - Where Timeless Memories Unfold
-          </h1>
+          </h2>
           <hr className="mb-8 w-full  border border-primary" />
           <p className="mx-4 mb-8 text-center">
             Step into our magnificent banquet hall, where we specialize in
@@ -247,27 +331,35 @@ function Homescreen(): any {
             your dreams.
           </p>
           <hr className="mb-8 w-full  border border-primary" />
-          <h3 className="mx-4 mt-4 text-start ">Space and Elegance</h3>
-          <p className="mx-4 mt-6 text-justify ">
-            Welcome to Aamraa Resort, where dreams meet destination, and where
-            your journey is our passion. We look forward to being a part of your
-            adventures and helping you create memories that last a lifetime.
-            Come, experience Aamraa Resort, where every visit is an opportunity
-            to be part of our ongoing story, and we can&apos;t wait to share it
-            with you
-          </p>
+
+          <div className="mb-10 flex flex-col md:flex-row">
+            <div className="md:w-1/2">
+              <h3 className="mx-4 mt-4 text-start ">Space and Elegance</h3>
+              <p className="mx-4 mt-6 text-justify ">
+                Welcome to Aamraa Resort, where dreams meet destination, and
+                where your journey is our passion. We look forward to being a
+                part of your adventures and helping you create memories that
+                last a lifetime. Come, experience Aamraa Resort, where every
+                visit is an opportunity to be part of our ongoing story, and we
+                can&apos;t wait to share it with you
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <h3 className="mx-4 mt-4 text-end ">Tailored Perfection</h3>
+              <p className="mx-4 mt-6 text-justify ">
+                Welcome to Aamraa Resort, where dreams meet destination, and
+                where your journey is our passion. We look forward to being a
+                part of your adventures and helping you create memories that
+                last a lifetime. Come, experience Aamraa Resort, where every
+                visit is an opportunity to be part of our ongoing story, and we
+                can&apos;t wait to share it with you
+              </p>
+            </div>
+          </div>
+
           <hr className="mb-8 w-full  border border-primary" />
-          <h3 className="mx-4 mt-4 text-end ">Tailored Perfection</h3>
-          <p className="mx-4 mt-6 text-justify ">
-            Welcome to Aamraa Resort, where dreams meet destination, and where
-            your journey is our passion. We look forward to being a part of your
-            adventures and helping you create memories that last a lifetime.
-            Come, experience Aamraa Resort, where every visit is an opportunity
-            to be part of our ongoing story, and we can&apos;t wait to share it
-            with you
-          </p>
-          <hr className="mb-8 w-full  border border-primary" />
-          <h3 className="mx-4 mt-4 text-start ">
+
+          <h3 className="mx-4 mt-4 text-center  ">
             Celebrating Moments Extraordinaire
           </h3>
           <p className="mx-4 mt-6 text-justify ">
@@ -283,7 +375,7 @@ function Homescreen(): any {
             where your dreams come alive in the most elegant and enchanting way.
           </p>
         </div>
-        <div className="flex-flex-col w-full  items-center justify-start  px-5 py-10">
+        {/* <div className="flex-flex-col w-full  items-center justify-start  px-5 py-10">
           <h1 className="mb-8 text-center">Our Additional Amenities</h1>
 
           <ul className="mx-8 list-disc space-y-4  ">
@@ -319,8 +411,9 @@ function Homescreen(): any {
               Experience Rural Life at Junnar&apos;s Villages
             </li>
           </ul>
-        </div>
-        <div className="flex-flex-col w-full  items-center justify-start bg-[#F8F5F0] px-5 py-10">
+        </div> */}
+        {/* Restaurent */}
+        <div className="flex-flex-col w-full  items-center justify-start  px-5 py-10">
           <h1 className="mb-4 text-center">Restaurant</h1>
           <h3 className="mb-8 text-center">
             Dining Delights - Embark on a Culinary Odyssey
@@ -334,55 +427,157 @@ function Homescreen(): any {
             your stay.
           </p>
           <hr className="mb-8 w-full  border border-primary" />
-          <h3 className="mx-4 mt-4 text-start ">The Art of Cuisine</h3>
-          <p className="mx-4 mt-6 text-justify ">
-            Step into our restaurant, where we celebrate the art of cuisine. Our
-            kitchen is led by a team of exceptionally talented chefs, each a
-            maestro in their own right. With unwavering dedication, they craft
-            an array of exquisite dishes that cater to every palate. From
-            traditional Indian delicacies to international delights, our menu is
-            a symphony of flavors that promises to tantalize your taste buds.
-            with you
-          </p>
+          <div className="mb-10 flex flex-col md:flex-row">
+            <div className="md:w-1/2">
+              <h3 className="mx-4 mt-4 text-start ">The Art of Cuisine</h3>
+              <p className="mx-4 mt-6 text-justify ">
+                Step into our restaurant, where we celebrate the art of cuisine.
+                Our kitchen is led by a team of exceptionally talented chefs,
+                each a maestro in their own right. With unwavering dedication,
+                they craft an array of exquisite dishes that cater to every
+                palate. From traditional Indian delicacies to international
+                delights, our menu is a symphony of flavors that promises to
+                tantalize your taste buds. with you
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <h3 className="mx-4 mt-4 text-end ">A Tale of Two Tastes</h3>
+              <p className="mx-4 mt-6 text-justify ">
+                Our culinary journey takes you on a voyage through both
+                vegetarian and non-vegetarian culinary realms. Whether
+                you&apos;re an ardent vegetarian or a dedicated non-vegetarian,
+                we&apos;ve curated a menu that caters to your preferences. The
+                sumptuous vegetarian thali boasts the richness of spices and
+                ingredients that define Indian cuisine. Meanwhile, the sizzling
+                non-veg platter is a testament to the vibrancy and diversity of
+                flavors, satisfying even the most discerning of palates.
+              </p>
+            </div>
+          </div>
+
           <hr className="mb-8 w-full  border border-primary" />
-          <h3 className="mx-4 mt-4 text-end ">A Tale of Two Tastes</h3>
-          <p className="mx-4 mt-6 text-justify ">
-            Our culinary journey takes you on a voyage through both vegetarian
-            and non-vegetarian culinary realms. Whether you&apos;re an ardent
-            vegetarian or a dedicated non-vegetarian, we&apos;ve curated a menu
-            that caters to your preferences. The sumptuous vegetarian thali
-            boasts the richness of spices and ingredients that define Indian
-            cuisine. Meanwhile, the sizzling non-veg platter is a testament to
-            the vibrancy and diversity of flavors, satisfying even the most
-            discerning of palates.
-          </p>
+          <div className="mb-10 flex flex-col md:flex-row ">
+            <div className="md:w-1/2">
+              <h3 className="mx-4 mt-4 text-start ">Scenic Dining</h3>
+              <p className="mx-4 mt-6 text-justify ">
+                The setting for your dining experience is as exquisite as the
+                dishes themselves. Enjoy your meals against the backdrop of
+                serene lake views, where the gentle play of sunlight on the
+                water creates an ambiance that&apos;s second to none. Whether
+                it&apos;s breakfast, lunch, or dinner, each dining experience is
+                an immersive journey that transports you to a world of taste and
+                tranquility.
+              </p>
+            </div>
+            <div className="md:w-1/2">
+              <h3 className="mx-4 mt-4 text-end ">Impeccable Service</h3>
+              <p className="mx-4 mt-6 text-justify ">
+                Our commitment to your dining satisfaction goes beyond the
+                cuisine. Our attentive staff is dedicated to providing
+                impeccable service, ensuring that your every need is met. From
+                recommending the perfect wine to pairing it with your choice of
+                dish, we&apos;re here to make your dining experience
+                extraordinary.
+              </p>
+            </div>
+          </div>
+
           <hr className="mb-8 w-full  border border-primary" />
-          <h3 className="mx-4 mt-4 text-start ">Scenic Dining</h3>
-          <p className="mx-4 mt-6 text-justify ">
-            The setting for your dining experience is as exquisite as the dishes
-            themselves. Enjoy your meals against the backdrop of serene lake
-            views, where the gentle play of sunlight on the water creates an
-            ambiance that&apos;s second to none. Whether it&apos;s breakfast,
-            lunch, or dinner, each dining experience is an immersive journey
-            that transports you to a world of taste and tranquility.
-          </p>
-          <hr className="mb-8 w-full  border border-primary" />
-          <h3 className="mx-4 mt-4 text-end ">Impeccable Service</h3>
-          <p className="mx-4 mt-6 text-justify ">
-            Our commitment to your dining satisfaction goes beyond the cuisine.
-            Our attentive staff is dedicated to providing impeccable service,
-            ensuring that your every need is met. From recommending the perfect
-            wine to pairing it with your choice of dish, we&apos;re here to make
-            your dining experience extraordinary.
-          </p>
-          <p className="mx-4 mt-6 text-justify ">
-            At Aamraa Resort, dining is not just a meal; it&apos;s a
-            celebration. It&apos;s an exploration of flavors, a tribute to
-            tradition, and a testament to the artistry of our chefs. It&apos;s a
-            journey of the senses, where every bite tells a story, and every
-            moment is savored. Come, indulge in the delight of dining at Aamraa
-            Resort, where food is an experience, and every meal is a memory.
-          </p>
+        </div>
+        {/* Call Us Section */}
+        <div className="flex  min-h-screen w-screen flex-col items-center justify-center bg-[url('/ContactUsBg.jpg')]  bg-cover p-6  md:flex-row">
+          <div className="flex flex-col  items-start justify-center md:w-1/3 ">
+            <h1 className="mb-8 text-white ">Call us, it&apos;s toll-free</h1>
+            <p className="text-white">
+              Each of our guest rooms feature a private bath, wi-fi, cable
+              television and include full breakfast. And also have awesome swing
+              system in the ponds
+            </p>
+            <div className="my-10 flex items-center justify-center">
+              <MdLocalPhone size={80} color={"#DBA765"} />
+              <div>
+                <h4 className=" text-primary ">880 987 654 765</h4>
+                <h4 className="text-white">For More Information</h4>
+              </div>
+            </div>
+          </div>
+          <div className=" flex flex-col justify-center bg-white p-4 md:m-10 md:w-2/5 md:p-14 ">
+            <h3 className="self-start text-primary ">ROOMS AND SUITS</h3>
+            <h2 className="my-6">Hotel Booking Form</h2>
+            <div className="flex w-full space-x-6  ">
+              <div className="w-full">
+                <h4 className="mb-2 font-bold">Check In</h4>
+                <DatePicker
+                  className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
+                  selected={startDate}
+                  onChange={(date: any) => {
+                    setStartDate(date);
+                  }}
+                />
+              </div>
+              <div className="w-full">
+                <h4 className="mb-2 font-bold">Check Out</h4>
+                <DatePicker
+                  className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
+                  selected={startDate}
+                  onChange={(date: any) => {
+                    setStartDate(date);
+                  }}
+                />
+              </div>
+            </div>
+            <div className="flex space-x-6 ">
+              <div className="w-full">
+                <h4 className="mb-2 font-bold">Adult</h4>
+                <select
+                  id="countries"
+                  className="mb-6 block w-full border bg-white px-3 py-3"
+                >
+                  <option selected>1</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+              </div>
+              <div className="w-full">
+                <h4 className="mb-2 font-bold">Children</h4>
+                <select
+                  id="countries"
+                  className="mb-6 block w-full border bg-white px-3 py-3"
+                >
+                  <option selected>1</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                </select>
+              </div>
+            </div>
+            <div className="w-1/2">
+              <h4 className="mb-2 font-bold">Room</h4>
+              <select
+                id="countries"
+                className="mb-6 block w-full border bg-white px-3 py-3"
+              >
+                <option selected>1</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+            </div>
+            <button className="py-4 ">Check Availability</button>
+          </div>
         </div>
       </div>
     </>
