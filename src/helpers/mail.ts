@@ -14,18 +14,17 @@ export async function sendEmail(
   mail: string,
   chcekIn: string,
   checkOut: string,
-  adult: number,
-  children: number,
-  roomType: string,
-  reqRooms: string,
-  phone: string
+  peoples: string,
+  room: string,
+  phone: string,
+  name: string
 ): Promise<void> {
   const mailOptions = {
     from: process.env.EMAIL_ID, // sender address
     to: mail,
 
-    subject: `Booking Enquiry for ${reqRooms} rooms of ${roomType}`, // Subject line
-    html: `Check In: ${chcekIn}, \n Check Out ${checkOut}, \n Adult: ${adult} \n Children: ${children} \n Contact: ${phone}`,
+    subject: `Booking Enquiry for ${room}`, // Subject line
+    html: `Check In: ${chcekIn}, \n Check Out ${checkOut}, \n Peoples: ${peoples} \n name: ${name} \n Contact: ${phone}`,
   };
 
   await transporter.sendMail(mailOptions);

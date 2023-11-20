@@ -9,41 +9,28 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ): Promise<void> {
-  console.log(req.headers);
-
   if (req.method === "POST") {
-    const {
-      checkIn = "",
-      checkOut = "",
-      adult,
-      children = 0,
-      roomType = "",
-      reqRooms,
-      phone = "",
-    } = req.body;
+    const { checkIn, checkOut, peoples, room, phone, name } = req.body;
 
     if (
-      checkIn.length === 0 ||
-      checkOut.length === 0 ||
-      roomType.length === 0 ||
-      phone.length === 0
+      checkIn === undefined ||
+      checkOut === undefined ||
+      peoples === undefined ||
+      room === undefined ||
+      phone === undefined ||
+      name === undefined
     ) {
-      res.status(400).json({ message: "Invalid Data" });
+      res.status(400).json({ message: "Invalid Input" });
+      return;
     }
-
-    if (isNaN(adult) || isNaN(reqRooms) || isNaN(children)) {
-      res.status(400).json({ message: "Invalid Data" });
-    }
-
     await sendEmail(
       "booking@aamraaresort.com",
       checkIn,
       checkOut,
-      adult,
-      children,
-      roomType,
-      reqRooms,
-      phone
+      peoples,
+      room,
+      phone,
+      name
     );
     res.status(200).json({ message: "Email Sent Successfully" });
   } else {

@@ -9,23 +9,29 @@ function RoomSection(): JSX.Element {
           Rooms & Suits
         </h2>
         <div className="mx-auto flex max-w-6xl flex-col gap-6 md:flex-row">
-          <div className=" mx-6 flex h-96 flex-col items-start justify-end bg-[url('/RoomCardbg.jpg')] bg-cover p-4 md:w-1/3  md:p-4 ">
-            <h3 className="mb-4 leading-9 text-white">
-              Cosmo Capsules: The Futuristic Retreat
-            </h3>
-            <p className="mb-4 text-white">38m2/2 beds/1 bathroom</p>
+          <div className=" mx-6 flex h-96 flex-col items-start justify-end  bg-[url('/aamraa1.jpg')] bg-cover  md:w-1/3   ">
+            <div className="bg-black bg-opacity-40 p-4 md:p-4">
+              <h3 className="mb-4 leading-9 text-white">
+                Cosmo Capsules: The Futuristic Retreat
+              </h3>
+              <p className="mb-4 text-white">38m2/2 beds/1 bathroom</p>
+            </div>
           </div>
-          <div className=" mx-6  flex h-96 flex-col items-start justify-end bg-[url('/RoomCardbg.jpg')] bg-cover p-6  md:w-1/3  md:p-4">
-            <h3 className="pb-4 leading-9 text-white">
-              The Azure Lakeview Suites - Nature&apos;s Embrace
-            </h3>
-            <p className="mb-4 text-white">38m2/2 beds/1 bathroom</p>
+          <div className=" mx-6 flex h-96 flex-col items-start justify-end  bg-[url('/aamraa1.jpg')] bg-cover  md:w-1/3   ">
+            <div className="bg-black bg-opacity-40 p-4 md:p-4">
+              <h3 className="mb-4 leading-9 text-white">
+                The Azure Lakeview Suites - Nature&apos;s Embrace
+              </h3>
+              <p className="mb-4 text-white">38m2/2 beds/1 bathroom</p>
+            </div>
           </div>
-          <div className=" mx-6  flex h-96 flex-col items-start justify-end bg-[url('/RoomCardbg.jpg')] bg-cover p-6  md:w-1/3  md:p-4 ">
-            <h3 className="pb-4 leading-9 text-white">
-              The Wada Vintage Rooms - Echoes of Tradition
-            </h3>
-            <p className="mb-4 text-white">38m2/2 beds/1 bathroom</p>
+          <div className=" mx-6 flex h-96 flex-col items-start justify-end  bg-[url('/aamraa1.jpg')] bg-cover  md:w-1/3   ">
+            <div className="bg-black bg-opacity-40 p-4 md:p-4">
+              <h3 className="mb-4 leading-9 text-white">
+                The Wada Vintage Rooms - Echoes of Tradition
+              </h3>
+              <p className="mb-4 text-white">38m2/2 beds/1 bathroom</p>
+            </div>
           </div>
         </div>
       </div>
