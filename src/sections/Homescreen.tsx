@@ -8,7 +8,7 @@ import { FaUniversity, FaCoffee, FaBath } from "react-icons/fa";
 import { IoMdAlarm } from "react-icons/io";
 import { MdLocalPhone } from "react-icons/md";
 
-function Homescreen(): any {
+function Homescreen(): JSX.Element {
   const initialState = {
     checkIn: "",
     checkOut: "",
@@ -24,19 +24,7 @@ function Homescreen(): any {
     <>
       <div className=" flex min-h-screen flex-col items-center justify-center   ">
         {/* Hero Section */}
-        <div className="flex min-h-screen w-screen flex-col items-center justify-center bg-[url('/HeroBg.jpg')] bg-cover py-10">
-          <h2 className=" text-primary">Aamraa Resort</h2>
-          <h1 className=" mx-4 mb-8 mt-4 text-center text-white">
-            Where Dreams Meet Destination
-          </h1>
-          <hr className="mb-8 w-[20%]  border border-primary" />
-          <p className="mx-4 mb-8 text-center text-2xl font-light text-white">
-            At Aamraa Resort, we&apos;re not just about providing a place to
-            stay; we&apos;re about crafting unforgettable experiences in the
-            heart of Junnar, near Bankarphata.
-          </p>
-          <button className="py-4 md:w-1/6">Rooms and Suits</button>
-        </div>
+
         {/* <div className="flex-flex-col  w-full items-center justify-start px-5 py-10">
           <h1 className="text-center">About Us</h1>
           <hr className="mb-8 w-[100%]  border border-primary" />
@@ -84,7 +72,7 @@ function Homescreen(): any {
           </p>
         </div> */}
         {/* Join us on journey */}
-        <div className="flex flex-col items-center justify-center bg-[#F8F5F0] py-20">
+        {/* <div className="flex flex-col items-center justify-center bg-[#F8F5F0] py-20">
           <h1 className="mb-8 text-center">Join Us on the Journey:</h1>
           <hr className="mb-8 w-[20%]  border border-primary" />
           <p className="mx-4 mb-8 text-center">
@@ -107,216 +95,15 @@ function Homescreen(): any {
             to be part of our ongoing story, and we can&apos;t wait to share it
             with you
           </p>
-        </div>
+        </div> */}
         {/* Checkin Form */}
-        <div className="flex w-[90%] flex-col items-start  justify-between space-x-4 px-10 py-10  md:flex-row md:items-center ">
-          <div>
-            <h4 className="mb-2 font-bold">Check In</h4>
-            <DatePicker
-              className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
-              selected={startDate}
-              onChange={(date: any) => {
-                setStartDate(date);
-              }}
-            />
-          </div>
-          <div>
-            <h4 className="mb-2 font-bold">Check Out</h4>
-            <DatePicker
-              className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
-              selected={startDate}
-              onChange={(date: any) => {
-                setStartDate(date);
-              }}
-            />
-          </div>
-          <div className="w-1/2 md:w-1/6">
-            <h4 className="mb-2 font-bold">Adult</h4>
-            <select
-              id="countries"
-              className="mb-6 block w-full border bg-white px-3 py-3"
-            >
-              <option selected>1</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-            </select>
-          </div>
-          <div className="w-1/2 md:w-1/6">
-            <h4 className="mb-2 font-bold">Children</h4>
-            <select
-              id="countries"
-              className="mb-6 block w-full border bg-white px-3 py-3"
-            >
-              <option selected>1</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-            </select>
-          </div>
-          <div className="w-1/2 md:w-1/6">
-            <h4 className="mb-2 font-bold">Room</h4>
-            <select
-              id="countries"
-              className="mb-6 block w-full border bg-white px-3 py-3"
-            >
-              <option selected>1</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-            </select>
-          </div>
 
-          <button className=" w-1/2 py-4 md:w-1/5">Check Now</button>
-        </div>
         {/* THe best luxury Hotel */}
-        <div className="flex min-h-screen flex-col items-center self-center px-6 py-10 md:flex-row md:justify-center">
-          <Image
-            src="/RoomsIMage.png"
-            height={400}
-            width={400}
-            className="mx-10 mb-4 md:w-2/5"
-            alt={""}
-          />
-          {/* <h1 className="mb-8 mt-8 text-start text-5xl text-primary">
-            Staycation
-          </h1> */}
-          <div className=" flex flex-col items-start justify-center self-center md:ml-12 md:w-1/2">
-            <h3 className="my-4 text-primary">THE BEST LUXURY HOTEL</h3>
-            <h2 className="font-semibold  md:w-2/3">
-              Find the right Apartment Hotel and Resort for You
-            </h2>
-            <p className=" my-6 text-lg font-normal md:my-10 md:w-2/3 ">
-              Over 39,000 people work for us in more than 70 countries all over
-              This breadth of global coverage combined with specialist services
-            </p>
-            <div className="mb-8 flex items-start justify-start border  p-8 md:w-3/4">
-              <RiGlobalLine color={"#be8746"} className="mr-8" size={80} />
-              <div>
-                <h3 className="mb-2  font-extrabold">5 Star Hotel In World</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae voluptatum
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start justify-start border  p-8 md:w-3/4 ">
-              <FaUniversity color={"#be8746"} className="mr-8" size={80} />
-              <div>
-                <h3 className="mb-2  font-extrabold">Best Environment</h3>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae voluptatum
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+
         {/* Rooms and suits */}
-        <div className="flex flex-col items-center justify-center bg-[#F8F5F0] py-10 ">
-          <h4 className=" text-primary">THE LUXURY HOTEL</h4>
-          <h2 className=" mx-4 mb-8 mt-4 text-center font-semibold ">
-            Rooms & Suits
-          </h2>
-          <div className="flex h-full flex-col justify-center md:flex-row">
-            <div className=" mx-6 mb-10 flex flex-col items-start justify-center bg-[url('/RoomCardbg.jpg')] bg-cover p-6 md:w-1/4  md:p-10 ">
-              <h3 className="mb-4 text-white">
-                Cosmo Capsules: The Futuristic Retreat
-              </h3>
-              <p className="mb-4 text-white">
-                Venture into the future of lodging with our Cosmo Capsules, a
-                novel and cozy haven designed for solo adventurers. As the
-                first-of-its-kind in Junnar, these cocoon-like capsules offer
-                unparalleled privacy and the chance to stargaze through your
-                personal window to the skies, allowing you to connect with the
-                celestial beauty above.
-              </p>
-              <button className=" py-4">Book Now</button>
-            </div>
-            <div className=" mx-6 mb-10 flex flex-col items-start justify-center bg-[url('/RoomCardbg.jpg')] bg-cover p-6  md:w-1/4  md:p-10">
-              <h3 className="pb-4 text-white">
-                The Azure Lakeview Suites - Nature&apos;s Embrace
-              </h3>
-              <p className="mb-4 text-white">
-                Embrace the picturesque charm of Junnar with our Azure Lakeview
-                Suites. Wake up to the stunning sight of the serene lake and
-                mountains beyond. Each suite is a luxurious haven, meticulously
-                designed to provide you with unobstructed views and unparalleled
-                comfort. Enjoy your morning coffee on the private balcony while
-                being caressed by the gentle breeze, and rejuvenate your senses.
-              </p>
-              <button className=" py-4">Book Now</button>
-            </div>
-            <div className=" mx-6 mb-10 flex flex-col items-start justify-center bg-[url('/RoomCardbg.jpg')] bg-cover p-6  md:w-1/4  md:p-10 ">
-              <h3 className="pb-4 text-white">
-                The Wada Vintage Rooms - Echoes of Tradition
-              </h3>
-              <p className="mb-4 text-white">
-                Transport yourself back in time to the Wada Vintage Rooms, where
-                the rich heritage of Junnar comes alive. These rooms blend
-                history and modernity seamlessly, with antique furnishings and
-                contemporary amenities. Experience the rustic elegance of
-                Junnar, with a touch of nostalgia in every corner
-              </p>
-              <button className=" py-4">Book Now</button>
-            </div>
-          </div>
-        </div>
+
         {/* Hotel Facilities */}
-        <div className="mb-10 flex flex-col items-center justify-center p-6">
-          <h3 className=" text-primary">HOTEL FACILITIES</h3>
-          <h2 className=" mx-4 mb-8 mt-4 text-center ">
-            Finest And Luxurious Hotel In The Town
-          </h2>
-          <p>
-            A wonderful serenity has taken possession of my entire soul, like
-            these sweet mornings of spring which I enjoy with my whole heart.
-          </p>
-          <div className="my-12 flex flex-col space-y-8 md:flex-row md:space-x-12">
-            <div className=" flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
-              <IoMdAlarm color={"#be8746"} size={60} />
 
-              <h3 className="mt-4">Parking</h3>
-            </div>
-            <div className=" flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
-              <FaCoffee color={"#be8746"} size={60} />
-
-              <h3 className="mt-4">Coffee</h3>
-            </div>
-            <div className="flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
-              <FaBath color={"#be8746"} size={60} />
-
-              <h3 className="mt-4">Bath</h3>
-            </div>
-            <div className=" flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
-              <RiHomeWifiLine color={"#be8746"} size={60} />
-
-              <h3 className="mt-4">Wifi</h3>
-            </div>
-            <div className="flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
-              <IoMdAlarm color={"#be8746"} size={60} />
-
-              <h3 className="mt-4">Parking</h3>
-            </div>
-            <div className="flex flex-col items-center justify-center rounded-sm border-2 border-[#F8F5F0] bg-[#F8F5F0] p-12 transition-all hover:border-2 hover:border-primary  hover:bg-white ">
-              <IoMdAlarm color={"#be8746"} size={60} />
-
-              <h3 className="mt-4">Parking</h3>
-            </div>
-          </div>
-        </div>
         {/* Banquet Hall */}
         <div className="flex-flex-col w-full  items-center justify-start bg-[#F8F5F0] px-5 py-10">
           <h2 className="mb-8 text-center">
@@ -485,100 +272,6 @@ function Homescreen(): any {
           <hr className="mb-8 w-full  border border-primary" />
         </div>
         {/* Call Us Section */}
-        <div className="flex  min-h-screen w-screen flex-col items-center justify-center bg-[url('/ContactUsBg.jpg')]  bg-cover p-6  md:flex-row">
-          <div className="flex flex-col  items-start justify-center md:w-1/3 ">
-            <h1 className="mb-8 text-white ">Call us, it&apos;s toll-free</h1>
-            <p className="text-white">
-              Each of our guest rooms feature a private bath, wi-fi, cable
-              television and include full breakfast. And also have awesome swing
-              system in the ponds
-            </p>
-            <div className="my-10 flex items-center justify-center">
-              <MdLocalPhone size={80} color={"#DBA765"} />
-              <div>
-                <h4 className=" text-primary ">880 987 654 765</h4>
-                <h4 className="text-white">For More Information</h4>
-              </div>
-            </div>
-          </div>
-          <div className=" flex flex-col justify-center bg-white p-4 md:m-10 md:w-2/5 md:p-14 ">
-            <h3 className="self-start text-primary ">ROOMS AND SUITS</h3>
-            <h2 className="my-6">Hotel Booking Form</h2>
-            <div className="flex w-full space-x-6  ">
-              <div className="w-full">
-                <h4 className="mb-2 font-bold">Check In</h4>
-                <DatePicker
-                  className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
-                  selected={startDate}
-                  onChange={(date: any) => {
-                    setStartDate(date);
-                  }}
-                />
-              </div>
-              <div className="w-full">
-                <h4 className="mb-2 font-bold">Check Out</h4>
-                <DatePicker
-                  className="mb-6 flex w-full items-center  justify-center border p-3  px-6  focus:border-primary"
-                  selected={startDate}
-                  onChange={(date: any) => {
-                    setStartDate(date);
-                  }}
-                />
-              </div>
-            </div>
-            <div className="flex space-x-6 ">
-              <div className="w-full">
-                <h4 className="mb-2 font-bold">Adult</h4>
-                <select
-                  id="countries"
-                  className="mb-6 block w-full border bg-white px-3 py-3"
-                >
-                  <option selected>1</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                </select>
-              </div>
-              <div className="w-full">
-                <h4 className="mb-2 font-bold">Children</h4>
-                <select
-                  id="countries"
-                  className="mb-6 block w-full border bg-white px-3 py-3"
-                >
-                  <option selected>1</option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                </select>
-              </div>
-            </div>
-            <div className="w-1/2">
-              <h4 className="mb-2 font-bold">Room</h4>
-              <select
-                id="countries"
-                className="mb-6 block w-full border bg-white px-3 py-3"
-              >
-                <option selected>1</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-              </select>
-            </div>
-            <button className="py-4 ">Check Availability</button>
-          </div>
-        </div>
       </div>
     </>
   );

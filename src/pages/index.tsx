@@ -1,13 +1,23 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import Homescreen from "@/sections/Homescreen";
+import ContactUsSection from "@/sections/ContactUsSection";
+import EnquiryForm from "@/sections/EnquiryForm";
+import FacilitySection from "@/sections/FacilitySection";
+import HeroSection from "@/sections/HeroSection";
+import RoomSection from "@/sections/RoomSection";
+import TopSection from "@/sections/TopSection";
 import React from "react";
 
 export default function Home(): JSX.Element {
   return (
     <>
       <Navbar />
-      <Homescreen />
+      <TopSection />
+      <EnquiryForm />
+      <HeroSection />
+      <RoomSection />
+      <FacilitySection />
+      <ContactUsSection />
       <Footer />
     </>
   );

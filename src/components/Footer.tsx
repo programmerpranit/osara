@@ -7,7 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center  bg-[#333333] pb-10 pt-10 text-white">
+    <footer className="flex flex-col items-center justify-center  bg-[#333333] pb-2 pt-2 text-white">
       <div className="flex flex-col items-start justify-around space-y-10 p-10 md:flex-row md:space-y-0">
         <div className="md:w-1/4">
           <div className="mb-4 ">
@@ -67,7 +67,7 @@ function Footer() {
         </div>
 
         <div className="mb-2 md:w-1/4">
-          <h2 className=" mb-2 text-white ">General</h2>
+          <h3 className=" mb-2 text-white ">General</h3>
           <ul>
             <li className="flex items-center gap-3 text-base font-semibold">
               <AiOutlineArrowRight color={"white"} />
@@ -75,7 +75,7 @@ function Footer() {
                 href="javascript:void(0)"
                 className="text-body-color inline-block   leading-loose hover:text-primary"
               >
-                <h4 className="text-white">Accommodation</h4>
+                <h6 className="text-white">Accommodation</h6>
               </Link>
             </li>
             <li className="flex items-center gap-3 text-base font-semibold">
@@ -84,7 +84,7 @@ function Footer() {
                 href="javascript:void(0)"
                 className="text-body-color inline-block  leading-loose hover:text-primary"
               >
-                <h4 className="text-white"> Dine and Drink</h4>
+                <h6 className="text-white"> Dine and Drink</h6>
               </Link>
             </li>
             <li className="flex items-center gap-3 text-base font-semibold">
@@ -93,7 +93,7 @@ function Footer() {
                 href="javascript:void(0)"
                 className="text-body-color inline-block  leading-loose hover:text-primary"
               >
-                <h4 className="text-white"> Spa and Leisure</h4>
+                <h6 className="text-white"> Spa and Leisure</h6>
               </Link>
             </li>
             <li className="flex items-center gap-3 text-base font-semibold">
@@ -102,7 +102,7 @@ function Footer() {
                 href="javascript:void(0)"
                 className="text-body-color inline-block  leading-loose hover:text-primary"
               >
-                <h4 className="text-white"> Services</h4>
+                <h6 className="text-white"> Services</h6>
               </Link>
             </li>
           </ul>
@@ -143,7 +143,7 @@ function Footer() {
         </div>
       </div>
       <hr className="my-8 h-px w-11/12 self-center border-0 bg-black" />
-      <h4 className="text-white">Copyright © 2023. All rights reserved.</h4>
+      <h6 className="text-white">Copyright © 2023. All rights reserved.</h6>
     </footer>
   );
 }
