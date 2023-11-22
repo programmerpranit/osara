@@ -21,7 +21,7 @@ function ContactUsSection(): JSX.Element {
           </div>
         </div>
         <div className=" flex flex-col justify-center  bg-white p-8 md:m-10 md:w-2/5 md:p-14 ">
-          <h3 className="self-start text-primary ">ROOMS AND SUITS</h3>
+          <h5 className="self-start text-primary ">ROOMS AND SUITS</h5>
           <h2 className="my-6">Hotel Booking Form</h2>
           <div className="flex w-full flex-col md:flex-row md:space-x-6  ">
             <div className="w-full">

@@ -7,7 +7,7 @@ function HeroSection(): JSX.Element {
   return (
     <>
       <div className="m-auto flex min-h-screen max-w-7xl flex-col items-center  justify-around px-6 py-20 md:flex-row ">
-        <div className="flex  p-14 md:w-1/2">
+        <div className="flex  md:w-1/2 md:p-14">
           <div className="w-1/2 p-2">
             <Image
               src="/aamraa-vertical.jpg"

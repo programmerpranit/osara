@@ -7,11 +7,11 @@ function FacilitySection(): JSX.Element {
     <>
       {" "}
       <div className="mb-10 flex flex-col items-center justify-center p-6 py-20">
-        <h3 className=" text-primary">HOTEL FACILITIES</h3>
+        <h5>HOTEL FACILITIES</h5>
         <h2 className=" mx-4 mb-8 mt-4 text-center ">
           Finest And Luxurious Hotel In The Town
         </h2>
-        <p>
+        <p className="text-center">
           A wonderful serenity has taken possession of my entire soul, like
           these sweet mornings of spring which I enjoy with my whole heart.
         </p>
