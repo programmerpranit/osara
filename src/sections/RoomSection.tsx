@@ -1,7 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { Place } from "./NearByPlaces";
-import { title } from "process";
 
 function RoomSection(): JSX.Element {
   return (

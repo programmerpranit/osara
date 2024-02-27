@@ -1,6 +1,4 @@
 import React, { type ReactNode } from "react";
-import { RiHomeWifiLine } from "react-icons/ri";
-import { FaCoffee, FaBath } from "react-icons/fa";
 import { IoMdAlarm } from "react-icons/io";
 
 function FacilitySection(): JSX.Element {
