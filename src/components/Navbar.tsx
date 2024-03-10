@@ -11,7 +11,12 @@ const Navbar = (): JSX.Element => {
         <div className="m-auto flex items-center justify-between md:w-3/4">
           <div className="logo">
             <Link href={"/"}>
-              <Image width={80} height={80} src={"/logo.png"} alt="logo" />
+              <Image
+                width={80}
+                height={80}
+                src={"/aamraa-logo.png"}
+                alt="logo"
+              />
             </Link>
           </div>
           <div
@@ -26,14 +31,14 @@ const Navbar = (): JSX.Element => {
                 Home
               </p>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/about"}>
               <p className="my-1 cursor-pointer hover:text-primary md:mx-5">
                 About
               </p>
             </Link>
-            <Link href={"/"}>
+            <Link href={"/rooms"}>
               <p className="my-1 cursor-pointer hover:text-primary md:mx-5">
-                Contact
+                Rooms
               </p>
             </Link>
           </div>

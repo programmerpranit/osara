@@ -7,19 +7,18 @@ import Image from "next/image";
 import Link from "next/link";
 function Footer() {
   return (
-    <footer className="flex flex-col items-center justify-center  bg-[#333333] pb-2 pt-2 text-white">
+    <footer className="flex flex-col items-center justify-center  bg-[#333333] py-10 text-white">
       <div className="flex flex-col items-start justify-around space-y-10 p-10 md:flex-row md:space-y-0">
         <div className="md:w-1/4">
           <div className="mb-4 ">
-            <a href="javascript:void(0)" className="mb-6 inline-block ">
-              <Image
-                className="h-full w-full cursor-pointer"
-                src="/Logo.png"
-                width={70}
-                height={70}
-                alt="..."
-              />
-            </a>
+            <Image
+              className=" cursor-pointer"
+              src="/Logo.png"
+              width={100}
+              height={100}
+              alt="..."
+            />
+            <br />
             <p className="mb-4 text-lg font-light  text-white">
               We are here to assist you and answer your inquiries promptly. You
               can get in touch with Aamraa Resort using the following contact
@@ -113,37 +112,26 @@ function Footer() {
           <h5 className="mb-4  ">Feel free to contact</h5>
           <ul>
             <li>
-              <a
-                href="javascript:void(0)"
-                className="text-body-color mb-1 flex items-center text-base  leading-loose hover:text-primary"
-              >
+              <div className="text-body-color mb-1 flex items-center text-base  leading-loose hover:text-primary">
                 <IoMdCall size={25} className="mr-3" />: +91-XXX-XXXXXXX (For
                 reservations and inquiries)
-              </a>
+              </div>
             </li>
             <li>
-              <a
-                href="javascript:void(0)"
-                className="text-body-color mb-1 flex items-center text-base leading-loose hover:text-primary"
-              >
+              <div className="text-body-color mb-1 flex items-center text-base leading-loose hover:text-primary">
                 <MdLocationPin size={25} className="mr-3" />
                 Aamraa Resort, Near Bankarphata, Junnar, Maharashtra, India.
-              </a>
+              </div>
             </li>
             <li>
-              <a
-                href="javascript:void(0)"
-                className="text-body-color mb-1 flex items-center text-base leading-loose hover:text-primary"
-              >
+              <div className="text-body-color mb-1 flex items-center text-base leading-loose hover:text-primary">
                 <AiOutlineMail size={25} className="mr-3" />
                 info@aamraaresort.com
-              </a>
+              </div>
             </li>
           </ul>
         </div>
       </div>
-      <hr className="my-8 h-px w-11/12 self-center border-0 bg-black" />
-      <h6 className="text-white">Copyright © 2023. All rights reserved.</h6>
     </footer>
   );
 }

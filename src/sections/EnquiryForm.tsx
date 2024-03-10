@@ -37,7 +37,7 @@ function EnquiryForm(): JSX.Element {
 
   return (
     <>
-      <div className="mx-auto w-11/12 bg-secondary">
+      <div className="mx-auto bg-secondary md:px-10">
         <div className=" flex  flex-col items-start justify-between gap-2  self-center  px-10 pt-10 md:flex-row  md:items-center ">
           <div className="flex-1 max-md:w-full ">
             <h4 className="font-secondary mb-2 ">Check In</h4>

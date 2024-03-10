@@ -10,7 +10,7 @@ function HeroSection(): JSX.Element {
         <div className="flex  md:w-1/2 md:p-14">
           <div className="w-1/2 p-2">
             <Image
-              src="/aamraa-vertical.jpg"
+              src="/images/ambi/ambi18.jpg"
               height={300}
               width={300}
               className="object-contain"
@@ -22,7 +22,7 @@ function HeroSection(): JSX.Element {
             <br />
             <br />
             <Image
-              src="/aamraa-vertical.jpg"
+              src="/images/ambi/ambi70.jpg"
               height={300}
               width={300}
               className="object-contain"
