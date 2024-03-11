@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { features } from "process";
-import React, { type ReactNode } from "react";
+import React from "react";
 import ImageGallery from "./ImageGallery";
 
 interface IRoomDetails {
