@@ -42,8 +42,9 @@ function HeroSection(): JSX.Element {
             categories, each promising a unique escape that redefines your idea
             of relaxation.
           </p>
-          <div className="mb-6 flex items-start justify-start border  p-5 ">
-            <RiGlobalLine color={"#be8746"} className="mr-8" size={80} />
+          <div className="group relative mb-6 flex items-start justify-start border p-5">
+            <div className="absolute left-0 top-0 -z-50 h-full w-0 bg-secondary transition-all duration-500 group-hover:w-full "></div>
+            <RiGlobalLine color={"#be8746"} className="mr-8 " size={80} />
             <div>
               <h4 className="font-secondary mb-2 ">Tailored Perfection</h4>
               <p>
@@ -52,7 +53,8 @@ function HeroSection(): JSX.Element {
               </p>
             </div>
           </div>
-          <div className="flex items-start justify-start border  p-5  ">
+          <div className="group relative flex items-start justify-start border  p-5  ">
+            <div className="absolute left-0 top-0 -z-50 h-full w-0 bg-secondary transition-all duration-500 group-hover:w-full "></div>
             <FaUniversity color={"#be8746"} className="mr-8" size={80} />
             <div>
               <h4 className="font-secondary mb-2 ">

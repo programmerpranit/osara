@@ -5,7 +5,7 @@ const Capsule = (): JSX.Element => {
   return (
     <>
       <RoomDetail
-        name="Mangiferal"
+        name="Cosmo Capsule"
         subtitle="The Futuristic Retreat in Cosmo Capsules"
         featured="/images/wada/wada25.jpg"
         images={[
