@@ -13,14 +13,14 @@ const Loft = (): JSX.Element => {
           "/images/vip/vip1.jpg",
           "/images/vip/vip2.jpg",
           "/images/vip/vip3.jpg",
-          "/images/vip/vip4.jpg",
-          "/images/vip/vip5.jpg",
-          "/images/vip/vip6.jpg",
-          "/images/vip/vip7.jpg",
-          "/images/vip/vip8.jpg",
-          "/images/vip/vip9.jpg",
-          "/images/vip/vip10.jpg",
-          "/images/vip/vip11.jpg",
+          // "/images/vip/vip4.jpg",
+          // "/images/vip/vip5.jpg",
+          // "/images/vip/vip6.jpg",
+          // "/images/vip/vip7.jpg",
+          // "/images/vip/vip8.jpg",
+          // "/images/vip/vip9.jpg",
+          // "/images/vip/vip10.jpg",
+          // "/images/vip/vip11.jpg",
           "/images/vip/vip12.jpg",
           "/images/vip/vip13.jpg",
           "/images/vip/vip14.jpg",
@@ -42,7 +42,7 @@ const Loft = (): JSX.Element => {
           "/images/vip/vip30.jpg",
           "/images/vip/vip31.jpg",
         ]}
-        description="Discover urban sophistication in Loft- 1, our stylish retreat designed for modern travelers. With sleek interiors and contemporary amenities, these rooms offer a chic escape amidst the natural beauty of Junnar. Experience the perfect fusion of style and comfort in our Loft rooms.
+        description="Discover urban sophistication in Loft, our stylish retreat designed for modern travelers. With sleek interiors and contemporary amenities, these rooms offer a chic escape amidst the natural beauty of Junnar. Experience the perfect fusion of style and comfort in our Loft rooms.
 "
       />
     </>

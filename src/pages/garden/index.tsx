@@ -4,7 +4,7 @@ import React from "react";
 const GardenPage = (): JSX.Element => {
   return (
     <>
-      <div className="mx-auto max-w-7xl p-10">
+      <div className="mx-auto max-w-7xl p-5 py-40">
         <h1 className="text-center">Open Garden Lawn</h1>
         <p className="mx-auto max-w-5xl p-5 text-center">
           Embrace Nature&apos;s Charm: Royal Garden Open Lawn

@@ -6,6 +6,7 @@ function EnquiryForm(): JSX.Element {
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [peoples, setPeoples] = useState("1");
+  const [child, setChild] = useState("0");
   const [name, setName] = useState("");
   const [room, setRoom] = useState("1");
   const [phone, setPhone] = useState("");
@@ -73,7 +74,6 @@ function EnquiryForm(): JSX.Element {
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
-              <option value="4">4</option>
             </select>
           </div>
           <div className="flex-1 max-md:w-full">
@@ -86,9 +86,9 @@ function EnquiryForm(): JSX.Element {
               }}
               className="mb-6 block w-full border bg-white px-3 py-3 outline-none focus:border-primary"
             >
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
+              <option value="Mangiferal">Mangiferal</option>
+              <option value="Cosmo Capsule">Cosmo Capsule</option>
+              <option value="Loft">Loft</option>
             </select>
           </div>
           <div className=" flex-1 max-md:w-full">
@@ -122,7 +122,7 @@ function EnquiryForm(): JSX.Element {
             }}
             className=" mx-auto mb-5 w-4/5 py-4 md:w-1/3"
           >
-            Check Now
+            Check Availability
           </button>
         </div>
       </div>

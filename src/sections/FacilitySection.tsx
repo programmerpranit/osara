@@ -23,12 +23,12 @@ function FacilitySection(): JSX.Element {
       <div className="mx-auto mb-10 flex max-w-7xl flex-col items-center justify-center p-6 py-20">
         <h5>HOTEL FACILITIES</h5>
         <h2 className=" mx-4 mb-8 mt-4 text-center ">
-          Finest And Luxurious Hotel In The Town
+          Dive into Our Signature Hotel Facilities
         </h2>
-        <p className="text-center">
+        {/* <p className="text-center">
           A wonderful serenity has taken possession of my entire soul, like
           these sweet mornings of spring which I enjoy with my whole heart.
-        </p>
+        </p> */}
         <div className="m-auto my-12 flex flex-wrap justify-around">
           <Facility
             icon={<LuParkingCircle color={"#be8746"} size={60} />}

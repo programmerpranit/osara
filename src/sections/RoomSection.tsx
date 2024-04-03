@@ -5,7 +5,7 @@ import React from "react";
 function RoomSection(): JSX.Element {
   return (
     <>
-      <div className="py-20">
+      <div className="p-5 py-20">
         <div className="mx-auto max-w-7xl text-center">
           <h5>Staycation</h5>
           <h2 className=" mx-4 mb-8 mt-4 text-center font-semibold ">

@@ -16,7 +16,7 @@ const ImageGallery = ({ images }: { images: string[] }): JSX.Element => {
           <Image src={current} alt="" fill className="object-contain " />
         </div>
       )}
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap justify-center">
         {images.map((img, i) => (
           <div key={i} className="w-full p-3 md:w-1/4">
             <div

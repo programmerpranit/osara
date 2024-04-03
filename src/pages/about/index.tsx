@@ -4,7 +4,7 @@ import React from "react";
 const AboutPage = (): JSX.Element => {
   return (
     <>
-      <div className="mx-auto max-w-7xl py-20">
+      <div className="mx-auto max-w-7xl py-40 ">
         <h1 className=" text-center">About Us</h1>
         <p className="mx-auto max-w-5xl p-5 text-center">
           At Aamraa Resort, we&apos;re not just about providing a place to stay;
@@ -16,21 +16,21 @@ const AboutPage = (): JSX.Element => {
           <Image
             src={"/images/ambi/ambi57.jpg"}
             alt=""
-            className="w-1/3 p-5"
+            className="p-5 md:w-1/3"
             width={500}
             height={500}
           />
           <Image
             src={"/images/ambi/ambi65.jpg"}
             alt=""
-            className="w-1/3 p-5"
+            className="p-5 md:w-1/3"
             width={500}
             height={500}
           />
           <Image
             src={"/images/ambi/ambi4.jpg"}
             alt=""
-            className="w-1/3 p-5"
+            className="p-5 md:w-1/3"
             width={500}
             height={500}
           />

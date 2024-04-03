@@ -4,8 +4,13 @@ import React from "react";
 const RestaurentPage = (): JSX.Element => {
   return (
     <>
-      <div className="mx-auto min-h-screen max-w-7xl">
-        <h1 className="py-5 pt-10 text-center">Restaurent</h1>
+      <div className="mx-auto min-h-screen max-w-7xl py-40">
+        <h1 className="py-3  text-center">Restaurent</h1>
+        <div className="mx-auto flex max-w-sm justify-between pb-5">
+          <p className="font-semibold text-green-600">Pure Veg</p>
+          <p>&</p>
+          <p className="font-semibold text-red-600">NonVeg</p>
+        </div>
         <p className="text-center">
           Dining Delights - Embark on a Culinary Odyssey
         </p>

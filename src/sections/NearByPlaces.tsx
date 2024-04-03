@@ -4,10 +4,10 @@ import React from "react";
 const NearByPlaces = (): JSX.Element => {
   return (
     <>
-      <div className="mx-auto  max-w-7xl px-3 py-20 text-center">
+      <div className="mx-auto  max-w-7xl px-3 py-10 text-center">
         <h5>Near by Attractions</h5>
         <h2 className=" mx-4 mb-8 mt-4 text-center ">
-          Scenic Location of Aamraa Resort
+          Scenic Location Near amraa Resort
         </h2>
         <p className="text-center">
           Nestled amidst the picturesque landscape of Junnar Tehsil in Pune
@@ -32,7 +32,7 @@ const NearByPlaces = (): JSX.Element => {
             desc="Immerse yourself in nature's embrace along the banks of the Kukdi River, where gentle waters and lush greenery create the perfect setting for relaxation and rejuvenation."
           />
           <Place
-            image="/places/shivneri.jpg"
+            image="/places/shivneri2.jpg"
             title="Shivneri Fort"
             desc="Step back in time at Shivneri Fort, the birthplace of Shivaji Maharaj, where rugged landscapes and historic ruins beckon adventurers and history enthusiasts alike."
           />
@@ -57,7 +57,7 @@ const NearByPlaces = (): JSX.Element => {
             desc="Witness the serene waters of Manikdoh Dam, where azure skies meet tranquil reservoirs, offering opportunities for boating, birdwatching, and peaceful contemplation."
           />
           <Place
-            image="/places/ozar.jpg"
+            image="/places/ozar.webp"
             title="Ozar "
             desc="home to ancient temples dedicated to Lord Ganesha and Lord Shiva, where spiritual devotion meets architectural splendor."
           />

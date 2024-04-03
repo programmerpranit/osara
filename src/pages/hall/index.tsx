@@ -1,11 +1,12 @@
+import ImageGallery from "@/components/ImageGallery";
 import Image from "next/image";
 import React from "react";
 
 const HallPage = (): JSX.Element => {
   return (
     <>
-      <div className="mx-auto max-w-7xl p-10">
-        <h1 className="text-center">AC Hall</h1>
+      <div className="mx-auto max-w-7xl p-5 py-40">
+        <h1 className="text-center">Banquet Hall</h1>
         <p className="mx-auto max-w-5xl p-5 text-center">
           Step into a realm of opulence and grandeur at Aamraa Resort&apos;s
           Royal Palace Banquet Hall, where every moment is adorned with the
@@ -47,6 +48,21 @@ const HallPage = (): JSX.Element => {
             </p>
           </div>
         </div>
+
+        <ImageGallery
+          images={[
+            "/images/ac/ac0.jpg",
+            "/images/ac/ac1.jpg",
+            "/images/ac/ac2.jpg",
+            "/images/ac/ac3.jpg",
+            "/images/ac/ac4.jpg",
+            "/images/ac/ac5.jpg",
+            "/images/ac/ac6.jpg",
+            "/images/ac/ac7.jpg",
+            "/images/ac/ac8.jpg",
+            "/images/ac/ac9.jpg",
+          ]}
+        />
       </div>
     </>
   );

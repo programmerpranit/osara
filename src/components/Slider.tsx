@@ -46,7 +46,7 @@ const Slider = (): JSX.Element => {
               heart of Junnar, near Bankarphata.
             </p>
             <Link className=" md:w-1/6" href={"/rooms"}>
-              <button className="w-full py-4">Rooms and Suits</button>
+              <button className="w-full py-4">Explore</button>
             </Link>
           </div>
         </SwiperSlide>
@@ -59,19 +59,20 @@ const Slider = (): JSX.Element => {
           />
           <div className="absolute top-0 flex h-screen w-screen flex-col items-center justify-center bg-black bg-opacity-50 py-10">
             <h5 className=" mx-4 mt-4 text-center text-base text-primary md:mb-6  md:text-xl">
-              Where Dreams Meet Destination
+              Your Gateway to Junnar&apos;s Wonders, Your Home Away from Home.
             </h5>
             <h1 className=" mb-6 text-center  text-white max-md:text-3xl ">
-              Second Slide
+              AAMARA RESORT
             </h1>
             <hr className="mb-8 w-[20%]  border border-primary" />
             <p className="mx-4 mb-6 text-center text-lg font-light text-white md:w-[60%]">
-              At Aamraa Resort, we&apos;re not just about providing a place to
-              stay; we&apos;re about crafting unforgettable experiences in the
-              heart of Junnar, near Bankarphata.
+              Welcome to Aamraa Resort, where dreams meet destination, and where
+              your journey is our passion. We look forward to being a part of
+              your adventures and helping you create memories that last a
+              lifetime.
             </p>
             <Link className="py-4 md:w-1/6" href={"/rooms"}>
-              <button className="w-full py-4">Rooms and Suits</button>
+              <button className="w-full py-4">Explore</button>
             </Link>
           </div>
         </SwiperSlide>

@@ -8,6 +8,7 @@ import RoomSection from "@/sections/RoomSection";
 import React from "react";
 import HallSection from "@/sections/HallSection";
 import OpenGardenSection from "@/sections/OpenGardenSection";
+import GallerySection from "@/sections/Gallery";
 
 export default function Home(): JSX.Element {
   return (
@@ -22,6 +23,7 @@ export default function Home(): JSX.Element {
       <OpenGardenSection />
       <FacilitySection />
       <NearByPlaces />
+      <GallerySection />
       {/* <ContactUsSection /> */}
     </>
   );

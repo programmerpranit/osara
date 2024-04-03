@@ -4,7 +4,9 @@ import React from "react";
 const RoomsPage = (): JSX.Element => {
   return (
     <>
-      <RoomSection />
+      <div className="py-20">
+        <RoomSection />
+      </div>
     </>
   );
 };

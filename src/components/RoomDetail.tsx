@@ -19,7 +19,7 @@ const RoomDetail = ({
 }: IRoomDetails): JSX.Element => {
   return (
     <>
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-7xl pt-10">
         <h1 className="py-20 text-center">{name}</h1>
         <div className="flex flex-col-reverse md:flex-row">
           <div className="p-5 md:w-1/2">
