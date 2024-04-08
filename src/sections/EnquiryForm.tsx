@@ -6,7 +6,7 @@ function EnquiryForm(): JSX.Element {
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [peoples, setPeoples] = useState("1");
-  const [child, setChild] = useState("0");
+  // const [child, setChild] = useState("0");
   const [name, setName] = useState("");
   const [room, setRoom] = useState("1");
   const [phone, setPhone] = useState("");
